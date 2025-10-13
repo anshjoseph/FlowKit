@@ -34,7 +34,7 @@ FlowKit consists of six core components working together to provide a robust dis
 ### System Components
 
 #### 1. **Node Processing Unit (NPU)**
-The main worker node responsible for executing individual pipeline nodes. NPUs run in isolated VMs to safely execute remote code and process tasks.
+The main worker node responsible for executing individual pipeline nodes. NPUs run in isolated VMs to safely execute remote code and process tasks. its have only connection to Node runner no connection to db or any internal system components
 
 #### 2. **Node Runner**
 Acts as a bridge between NPUs and the FlowKit Control Unit. Responsibilities include:
