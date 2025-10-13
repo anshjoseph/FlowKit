@@ -1,0 +1,3 @@
+2025-10-12 07:28:01.318 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:39} \u2705 Connected to MongoDB at mongodb://localhost:27017
+2025-10-12 07:28:25.490 WARNING {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:66} Key not found: noo
+2025-10-12 07:30:58.733 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:49} MongoDB connection closed

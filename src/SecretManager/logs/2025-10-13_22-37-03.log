@@ -1,0 +1,143 @@
+2025-10-13 22:37:04.201 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:39} \u2705 Connected to MongoDB at mongodb://localhost:27017
+2025-10-13 22:43:32.139 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:47:31.531 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:47:32.114 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:49:08.297 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:49:16.598 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 22:51:41.040 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:51:52.722 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 22:54:36.995 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:54:37.395 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:54:45.290 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:54:46.906 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY']
+2025-10-13 22:54:59.663 INFO {MainThread} [main] (set_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:58} Set key: GROQ_API
+2025-10-13 22:55:00.135 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 22:55:08.689 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ_API
+2025-10-13 22:56:32.373 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 22:56:33.343 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:14:04.347 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:23:05.307 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:23:05.868 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:25:39.428 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:25:39.800 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:27:49.296 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:27:54.709 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:30:49.207 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:30:58.854 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:31:14.821 INFO {MainThread} [main] (set_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:58} Set key: HELLO
+2025-10-13 23:31:15.265 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API', 'HELLO']
+2025-10-13 23:31:19.551 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: HELLO
+2025-10-13 23:31:26.900 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: HELLO
+2025-10-13 23:31:28.098 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ_API
+2025-10-13 23:31:30.182 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:34:18.323 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: HELLO
+2025-10-13 23:34:27.174 INFO {MainThread} [main] (delete_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:78} Deleted key: HELLO
+2025-10-13 23:34:27.662 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:34:29.948 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:34:32.412 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:34:34.488 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ_API
+2025-10-13 23:34:58.109 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:34:58.456 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:37:28.264 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.265 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.330 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.333 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.335 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.337 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.340 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.341 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.342 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.344 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.345 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.347 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.348 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.349 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.349 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.350 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.351 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.351 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.352 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.353 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.354 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.355 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.355 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.356 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.357 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.357 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.358 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.359 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.360 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.361 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.361 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.362 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.363 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.363 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.364 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.364 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.365 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.365 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.366 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.366 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.367 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.368 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.368 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.369 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.369 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.370 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.370 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.371 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.371 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:37:28.372 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.059 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.062 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.063 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.064 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.065 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.066 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.067 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.078 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.079 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.080 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.081 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.082 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.083 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.084 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.084 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.085 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.086 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.087 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.088 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.089 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.089 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.090 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.091 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.092 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.093 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.093 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.094 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.095 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.097 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.097 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.098 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.099 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.100 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.101 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.101 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.102 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.103 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.104 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.105 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.106 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.107 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.108 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.110 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.111 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.112 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.113 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.113 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.114 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.115 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:40:18.116 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-13 23:44:24.375 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-13 23:44:24.800 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-14 00:31:09.540 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:49} MongoDB connection closed

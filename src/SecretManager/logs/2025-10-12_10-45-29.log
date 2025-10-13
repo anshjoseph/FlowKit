@@ -1,0 +1,2 @@
+2025-10-12 10:45:29.868 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:39} \u2705 Connected to MongoDB at mongodb://localhost:27017
+2025-10-12 10:49:30.907 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:49} MongoDB connection closed

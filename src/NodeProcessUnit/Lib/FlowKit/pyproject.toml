@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowkit"
+version = "1.0.0"
+description = "FlowKit core library"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "R Ansh Joseph", email = "ranshjoseph8@gmail.com" }]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["."]

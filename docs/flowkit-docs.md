@@ -1,0 +1,296 @@
+# FlowKit
+
+A distributed workflow execution framework for cloud-based asynchronous computation with centralized logging.
+
+## Features
+
+- 🚀 **Distributed Execution**: Run async functions across multiple nodes
+- 📊 **Centralized Logging**: Cloud-based log aggregation via NPU control
+- 🔄 **Workflow Orchestration**: Automatic downstream node triggering
+- ⚡ **Async-First**: Built on Python's asyncio for high performance
+- 🛡️ **Error Handling**: Robust error propagation and recovery
+
+## Installation
+go to the loc
+```bash
+pip install -e .
+```
+
+## Quick Start
+
+```python
+from flowkit.node import Node
+from flowkit.log import Logger
+
+# Initialize
+node = Node()
+logger = Logger(node)
+
+async def main():
+    # Get inputs
+    inputs = node.get_inputs()
+    
+    # Process
+    result = inputs["a"] + inputs["b"]
+    
+    # Log
+    await logger.info(f"Result: {result}")
+    
+    # Return (next_nodes, outputs, message)
+    return [], {"result": result}, "Success"
+
+# Run
+node.register_main(main)
+node.run()
+```
+
+## Usage
+
+### Node Execution
+
+**1. Create a Node**
+```python
+from flowkit.node import Node
+
+node = Node()
+```
+
+The node automatically parses command-line arguments:
+```bash
+python your_script.py input.json runner_id self_addr node_name
+```
+
+**2. Access Input Data**
+```python
+inputs = node.get_inputs()
+value = inputs["key"]
+```
+
+**3. Register Main Function**
+```python
+async def main():
+    # Your logic here
+    return [], {"output": "value"}, "Done"
+
+node.register_main(main)
+```
+
+**4. Execute**
+```python
+node.run()
+```
+
+### Logging
+
+**Initialize Logger**
+```python
+from flowkit.log import Logger
+
+logger = Logger(node)
+```
+
+**Log Messages**
+```python
+# Info level
+await logger.info("Processing started")
+
+# Warning level
+await logger.warning("Retrying connection")
+
+# Debug level
+await logger.debug(f"State: {variable}")
+
+# Error level
+await logger.error("Operation failed", include_traceback=True)
+
+# With context
+await logger.log_with_context(
+    "INFO", 
+    "Action completed",
+    {"user_id": "123", "duration_ms": 450}
+)
+```
+
+## Input Format
+
+Create an `input.json` file:
+
+```json
+{
+  "a": 10,
+  "b": 20,
+  "config": {
+    "mode": "production"
+  }
+}
+```
+
+## Return Format
+
+Your main function **must** return a tuple:
+
+```python
+(nodes, outputs, message)
+```
+
+- `nodes` (List[str]): Downstream nodes to execute
+- `outputs` (Dict): Data for downstream nodes
+- `message` (str): Status message
+
+**Examples:**
+
+```python
+# Success with downstream nodes
+return ["processor", "validator"], {"data": result}, "Complete"
+
+# Success, end of workflow
+return [], {"final": result}, "Workflow complete"
+
+# Error condition
+return [], {}, "Validation failed"
+```
+
+## Complete Example
+
+```python
+from flowkit.node import Node
+from flowkit.log import Logger
+
+node = Node()
+logger = Logger(node)
+
+async def main():
+    try:
+        await logger.info("Starting data processing")
+        
+        # Get inputs
+        inputs = node.get_inputs()
+        await logger.debug(f"Inputs: {inputs}")
+        
+        # Validate
+        if "data" not in inputs:
+            await logger.error("Missing required input: data")
+            return [], {}, "Missing data"
+        
+        # Process
+        result = process_data(inputs["data"])
+        await logger.info(f"Processed {len(result)} items")
+        
+        # Success
+        return ["next_node"], {"result": result}, "Success"
+        
+    except Exception as e:
+        await logger.error(f"Error: {e}", include_traceback=True)
+        return [], {}, str(e)
+
+def process_data(data):
+    # Your processing logic
+    return data.upper()
+
+node.register_main(main)
+node.run()
+```
+
+## Architecture
+
+```
+┌─────────────┐
+│   Node A    │  Executes async function
+│  (Logger)   │  Sends logs to NPU
+└──────┬──────┘
+       │ 
+       │ result(nodes, outputs, message)
+       ▼
+┌─────────────┐
+│ NPU Control │  Coordinates execution
+│   Server    │  Aggregates logs
+└──────┬──────┘
+       │
+       │ triggers
+       ▼
+┌─────────────┐
+│   Node B    │  Next in workflow
+│  (Logger)   │
+└─────────────┘
+```
+
+## Best Practices
+
+### ✅ Do
+
+- Always use `async def` for main functions
+- Use `await` with all logger methods
+- Return proper tuple format: `(nodes, outputs, message)`
+- Handle exceptions gracefully
+- Validate inputs early
+- Log key execution events
+
+### ❌ Don't
+
+- Use synchronous functions as entry points
+- Forget to await logger calls
+- Return incorrect tuple format
+- Ignore exceptions
+- Assume inputs exist without validation
+
+## Error Handling
+
+```python
+async def main():
+    try:
+        # Your logic
+        result = process()
+        return [], {"result": result}, "Success"
+        
+    except ValueError as e:
+        await logger.error(f"Validation error: {e}")
+        return [], {}, f"Invalid input: {e}"
+        
+    except Exception as e:
+        await logger.error(f"Unexpected: {e}", include_traceback=True)
+        return [], {}, "Internal error"
+```
+
+## API Reference
+
+### Node
+
+| Method | Description | Returns |
+|--------|-------------|---------|
+| `get_inputs()` | Get input data dictionary | `dict` |
+| `get_id()` | Get unique runner ID | `UUID` |
+| `register_main(func)` | Register async entry point | `None` |
+| `run()` | Execute registered function | `None` |
+
+### Logger
+
+| Method | Description |
+|--------|-------------|
+| `info(message)` | Log informational message |
+| `warning(message)` | Log warning message |
+| `debug(message)` | Log debug message |
+| `error(message, include_traceback=False)` | Log error message |
+| `log_with_context(level, message, context=None)` | Log with structured data |
+| `flush()` | Ensure all logs are sent |
+
+## Troubleshooting
+
+**Node doesn't start**
+- Check command-line arguments are correct
+- Verify `input.json` exists and is valid JSON
+
+**Logs not appearing**
+- Ensure `await` is used: `await logger.info(...)`
+- Check NPU control server is running
+
+**Function not executing**
+- Verify function is async: `async def main()`
+- Check registration: `node.register_main(main)`
+- Ensure return format: `([], {}, "message")`
+
+**Input data missing**
+- Verify JSON file path is correct
+- Check previous node outputs match expected inputs
+
+
+**Made with ❤️ for distributed workflows**

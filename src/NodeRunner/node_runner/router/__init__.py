@@ -1,0 +1,1 @@
+from node_runner.router.npu_route import npu_router
