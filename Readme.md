@@ -27,6 +27,10 @@ FlowKit is a powerful distributed system that enables you to create AI pipelines
 
 ---
 
+## DEMO
+[![Watch the video](https://img.youtube.com/vi/kM_ATi6F2xA/0.jpg)](https://www.youtube.com/watch?v=kM_ATi6F2xA)
+
+
 ## 🏗️ Architecture
 
 FlowKit consists of six core components working together to provide a robust distributed pipeline execution system:
@@ -118,8 +122,6 @@ return nodes, success_outputs, status_message
 - **status_message**: Human-readable execution status
 
 ---
-## DEMO
-[![Watch the video](https://img.youtube.com/vi/kM_ATi6F2xA/0.jpg)](https://www.youtube.com/watch?v=kM_ATi6F2xA)
 
 ## 🎨 User Interface
 

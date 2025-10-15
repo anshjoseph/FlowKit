@@ -1,1 +1,19 @@
 2025-10-15 09:36:39.895 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:39} \u2705 Connected to MongoDB at mongodb://localhost:27017
+2025-10-15 10:14:50.391 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 10:14:50.853 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 10:14:52.100 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-15 10:14:56.849 INFO {MainThread} [main] (delete_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:78} Deleted key: OPENAI_KEY
+2025-10-15 10:14:57.330 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['GROQ_API']
+2025-10-15 10:19:03.276 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ_API
+2025-10-15 10:19:12.247 INFO {MainThread} [main] (delete_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:78} Deleted key: GROQ_API
+2025-10-15 10:19:12.841 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: []
+2025-10-15 10:19:44.817 INFO {MainThread} [main] (set_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:58} Set key: GROQ
+2025-10-15 10:19:45.291 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['GROQ']
+2025-10-15 10:19:47.339 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 10:28:14.764 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 10:29:21.351 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['GROQ']
+2025-10-15 10:34:42.878 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 10:35:24.785 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 11:08:30.670 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 11:09:05.698 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
+2025-10-15 11:21:35.730 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: GROQ
