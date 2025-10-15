@@ -1,0 +1,10 @@
+2025-10-14 17:26:21.624 INFO {MainThread} [main] (lifespan) {D:\Project\V1\FlowKit\src\SecretManager\main.py:39} \u2705 Connected to MongoDB at mongodb://localhost:27017
+2025-10-14 17:27:23.674 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-14 17:27:45.657 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-14 17:30:48.192 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-14 20:41:38.868 INFO {MainThread} [main] (get_value) {D:\Project\V1\FlowKit\src\SecretManager\main.py:68} Get key: OPENAI_KEY
+2025-10-14 23:50:04.531 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 01:24:31.281 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 01:24:31.748 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 01:27:29.068 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']
+2025-10-15 01:27:29.591 INFO {MainThread} [main] (list_keys) {D:\Project\V1\FlowKit\src\SecretManager\main.py:87} Listing all keys: ['OPENAI_KEY', 'GROQ_API']

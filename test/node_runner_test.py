@@ -33,6 +33,7 @@ if __name__ == "__main__":
     code = """
 from flowkit.node import Node
 from flowkit.log import Logger
+import openai
 
 node = Node()
 logger = Logger(node)
@@ -45,7 +46,7 @@ async def main():
     for i in range(10):
         await logger.info("hola")
     # await logger.info(key)
-    return [], {"out":ret , "key":key}, "run succefully"
+    return ["node2"], {"out":ret , "key":key}, "run succefully"
 node.register_main(main)
 node.run()
 
