@@ -10864,3 +10864,1072 @@
 2025-10-15 01:27:12,728 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 completed node: node1
 2025-10-15 03:07:33,619 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: 404 Client Error: Not Found for url: http://127.0.0.1:8500/npu/pool/2c611127-89da-40e2-93ca-905247c24227
 2025-10-15 03:39:02,176 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: 404 Client Error: Not Found for url: http://127.0.0.1:8500/npu/pool/2c611127-89da-40e2-93ca-905247c24227
+2025-10-15 09:35:28,571 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 09:35:28,572 - [MainThread] - __main__ - INFO - Node configuration - ID: d8e629b8-d81f-4405-805c-0ed8b3baa7b8, Port: 11000, Parallel processes: 4
+2025-10-15 09:35:28,573 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 09:35:28,573 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 09:35:28,578 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:35:28,579 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 09:35:28,579 - [MainThread] - __main__ - INFO - Node ID: d8e629b8-d81f-4405-805c-0ed8b3baa7b8
+2025-10-15 09:35:28,579 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 09:35:28,580 - [MainThread] - __main__ - INFO - Port: 11000
+2025-10-15 09:35:28,581 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 09:35:28,581 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 09:35:28,581 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:35:28,630 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 09:35:28,631 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 09:35:30,680 - [MainThread] - __main__ - ERROR - Failed to register NPU: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5542E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000111A5542E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5542E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\src\NodeProcessUnit\main.py", line 439, in lifespan
+    res = requests.post(
+        f"{NODE_RUNNER_ADDR}/npu/add",
+        json=payload,
+        timeout=5
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5542E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:30,811 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 09:35:30,811 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 09:35:30,812 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 09:35:30,812 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 09:35:30,812 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 09:35:30,813 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 09:35:30,813 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 09:35:30,813 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 09:35:30,814 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 09:35:30,814 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 09:35:30,814 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 09:35:30,815 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 09:35:30,815 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 09:35:31,640 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 09:35:31,640 - [MainThread] - __main__ - INFO - Node configuration - ID: aaa4ed80-1f7d-4a1f-88c7-0b20929f7279, Port: 10491, Parallel processes: 4
+2025-10-15 09:35:31,641 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 09:35:31,642 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 09:35:31,649 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:35:31,649 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 09:35:31,650 - [MainThread] - __main__ - INFO - Node ID: aaa4ed80-1f7d-4a1f-88c7-0b20929f7279
+2025-10-15 09:35:31,650 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 09:35:31,651 - [MainThread] - __main__ - INFO - Port: 10491
+2025-10-15 09:35:31,652 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 09:35:31,652 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 09:35:31,653 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:35:31,704 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 09:35:31,704 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 09:35:32,873 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A55FCB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:33,752 - [MainThread] - __main__ - ERROR - Failed to register NPU: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5C2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001DA4E5C2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5C2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\src\NodeProcessUnit\main.py", line 439, in lifespan
+    res = requests.post(
+        f"{NODE_RUNNER_ADDR}/npu/add",
+        json=payload,
+        timeout=5
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5C2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:33,769 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 09:35:33,769 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 09:35:33,770 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 09:35:33,770 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 09:35:33,771 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 09:35:33,773 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 09:35:33,774 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 09:35:33,775 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 09:35:33,776 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 09:35:33,777 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 09:35:33,778 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 09:35:33,779 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 09:35:33,779 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 09:35:35,818 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E67CB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:41,913 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A55FD310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:44,841 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E67D310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:50,933 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5599BA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:53,862 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E619BA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:35:59,977 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A559A2C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:02,881 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E61A2C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:09,038 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5567BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:11,959 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5E7BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:18,077 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:21,022 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:27,104 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:30,058 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:36,138 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:39,106 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:45,167 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:48,143 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:54,234 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:36:57,173 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:03,256 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A561F570>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:06,239 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E69F570>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:12,290 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:15,284 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:21,321 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:24,327 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:30,363 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:33,354 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:39,414 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:42,408 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:48,456 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:51,467 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:37:57,510 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:00,501 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:06,561 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:09,526 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:15,604 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:18,587 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:24,649 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:27,624 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:33,690 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:36,648 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:42,717 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:45,716 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:51,781 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:38:54,736 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:00,803 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:03,803 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:09,849 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:12,847 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:18,871 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:21,870 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:27,915 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:30,914 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:36,954 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:39,962 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:46,018 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:49,009 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:55,074 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:39:58,044 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593DF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:04,124 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:07,057 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:13,176 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:16,115 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:22,242 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:25,151 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:31,279 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:34,192 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:40,320 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:43,209 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:49,373 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:52,236 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:40:58,409 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:01,289 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:07,459 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:10,323 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:16,512 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:19,359 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:25,551 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:28,398 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:34,588 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:37,447 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:43,627 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:46,527 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:52,691 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:41:55,570 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:01,767 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:04,595 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:10,809 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:13,626 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:19,846 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:22,669 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592AD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:28,890 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:31,707 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:37,914 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C5A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:40,761 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C5A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:46,945 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:49,805 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:55,976 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:42:58,840 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:05,007 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:07,883 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:14,058 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D6A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:16,920 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D6A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:23,108 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:25,970 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:32,153 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DF20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:35,003 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DF20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:41,183 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:44,055 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:50,218 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:53,091 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:43:59,256 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EBE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:02,137 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EBE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:08,294 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:11,211 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:17,338 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569FBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:20,276 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71FBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:26,416 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:29,323 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:35,437 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:38,363 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:44,493 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:47,400 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5938A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:53,530 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:44:56,440 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:02,586 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:05,489 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:11,623 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:14,536 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:20,677 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:23,599 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:29,718 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:32,650 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:38,741 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DBF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:41,691 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DBF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:47,790 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D7B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:50,716 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D7B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:56,843 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:45:59,764 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:05,891 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CF30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:08,798 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CF30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:14,925 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CAF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:17,835 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CAF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:23,974 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C6B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:26,872 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C6B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:33,010 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C270>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:35,898 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C270>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:42,035 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D0050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:44,920 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E750050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:51,081 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C270>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:46:53,963 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C270>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:00,106 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C6B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:02,992 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C6B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:09,122 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CAF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:12,007 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CAF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:18,137 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CF30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:21,031 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CF30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:27,163 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:30,052 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D370>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:36,194 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D7B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:39,070 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D7B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:45,211 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DBF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:48,095 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DBF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:54,261 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:47:57,143 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E030>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:03,314 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:06,204 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E470>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:12,356 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:15,236 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E8B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:21,372 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:24,292 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71ECF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:30,439 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:33,349 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:39,496 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:42,380 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:48,530 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:51,414 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:48:57,540 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:00,452 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592CF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:06,596 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D0490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:09,489 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E750490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:15,633 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5512E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:18,538 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E592E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:24,676 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:27,596 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593AC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:33,717 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:36,630 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:42,774 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:45,676 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EF10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:51,803 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:49:54,741 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:00,830 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:03,773 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:09,885 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:12,816 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E250>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:18,925 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:21,843 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:27,977 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:30,876 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:37,017 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:39,914 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:46,074 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:48,939 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:55,136 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:50:57,969 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:04,170 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:06,999 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C8D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:13,212 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:16,034 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:22,281 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:25,066 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:31,315 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D08D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:34,116 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E7508D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:40,363 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:43,156 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F680>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:49,404 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:52,206 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:51:58,458 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C5A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:01,238 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C5A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:07,529 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:10,267 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:16,542 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:19,296 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CE20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:25,591 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:28,340 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:34,656 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D6A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:37,399 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D6A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:43,698 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:46,453 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DAE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:52,714 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DF20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:52:55,482 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DF20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:01,784 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:04,517 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E360>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:10,825 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:13,535 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E7A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:19,869 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EBE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:22,572 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EBE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:28,920 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569FAC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:31,598 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71FAC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:37,989 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:40,622 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593F00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:47,027 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:49,647 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:56,073 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D0D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:53:58,687 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E750D10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:05,102 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A5513570>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:07,697 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E593790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:14,146 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A55139B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:16,730 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E5939B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:23,171 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569F240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:25,772 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71F240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:32,187 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569EE00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:34,832 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71EE00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:41,247 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E9C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:43,866 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E9C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:50,282 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E580>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:52,902 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E580>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:54:59,319 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569E140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:01,928 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71E140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:08,343 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569DD00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:10,965 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71DD00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:17,377 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D8C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:19,991 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D8C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:26,431 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:29,016 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:35,466 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569D040>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:38,079 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71D040>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:44,528 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569CC00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:47,119 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71CC00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:53,566 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:55:56,173 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:02,640 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:05,189 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:11,669 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D0C00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:14,220 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E750C00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:20,726 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A56D1150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:23,250 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E751150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:29,764 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:32,276 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C380>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:38,799 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/d8e629b8-d81f-4405-805c-0ed8b3baa7b8 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000111A569C7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:41,069 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 09:56:41,070 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 09:56:41,070 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 09:56:41,071 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 09:56:41,071 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 09:56:41,072 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 09:56:41,072 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 09:56:41,079 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 09:56:41,106 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 09:56:41,106 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 09:56:41,109 - [MainThread] - __main__ - INFO - NPU d8e629b8-d81f-4405-805c-0ed8b3baa7b8 shutdown complete
+2025-10-15 09:56:41,304 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DA4E71C7C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:47,228 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 09:56:47,228 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 09:56:47,229 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 09:56:47,229 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 09:56:47,229 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 09:56:47,230 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 09:56:47,233 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 09:56:47,247 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 09:56:47,248 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 09:56:47,265 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 09:56:47,266 - [MainThread] - __main__ - INFO - NPU aaa4ed80-1f7d-4a1f-88c7-0b20929f7279 shutdown complete
+2025-10-15 09:56:55,870 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 09:56:55,870 - [MainThread] - __main__ - INFO - Node configuration - ID: c05d313e-20af-432c-8855-b77f22316798, Port: 10933, Parallel processes: 4
+2025-10-15 09:56:55,871 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 09:56:55,871 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 09:56:55,877 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:56:55,877 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 09:56:55,877 - [MainThread] - __main__ - INFO - Node ID: c05d313e-20af-432c-8855-b77f22316798
+2025-10-15 09:56:55,878 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 09:56:55,878 - [MainThread] - __main__ - INFO - Port: 10933
+2025-10-15 09:56:55,878 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 09:56:55,879 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 09:56:55,879 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:56:55,926 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 09:56:55,926 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 09:56:57,962 - [MainThread] - __main__ - ERROR - Failed to register NPU: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEDFD2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000021BEDFD2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEDFD2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\src\NodeProcessUnit\main.py", line 439, in lifespan
+    res = requests.post(
+        f"{NODE_RUNNER_ADDR}/npu/add",
+        json=payload,
+        timeout=5
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEDFD2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:56:57,969 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 09:56:57,970 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 09:56:57,970 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 09:56:57,970 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 09:56:57,970 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 09:56:57,971 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 09:56:57,971 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 09:56:57,971 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 09:56:57,972 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 09:56:57,972 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 09:56:57,972 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 09:56:57,972 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 09:56:57,972 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 09:56:58,411 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 09:56:58,412 - [MainThread] - __main__ - INFO - Node configuration - ID: b51d8947-e22c-47e0-a7e2-1d5b6ef73994, Port: 10040, Parallel processes: 4
+2025-10-15 09:56:58,412 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 09:56:58,413 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 09:56:58,418 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:56:58,419 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 09:56:58,419 - [MainThread] - __main__ - INFO - Node ID: b51d8947-e22c-47e0-a7e2-1d5b6ef73994
+2025-10-15 09:56:58,419 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 09:56:58,420 - [MainThread] - __main__ - INFO - Port: 10040
+2025-10-15 09:56:58,420 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 09:56:58,420 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 09:56:58,420 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:56:58,465 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 09:56:58,466 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 09:57:00,023 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/c05d313e-20af-432c-8855-b77f22316798 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEE08CB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:00,510 - [MainThread] - __main__ - ERROR - Failed to register NPU: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B202E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000002374B202E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B202E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Project\V1\FlowKit\src\NodeProcessUnit\main.py", line 439, in lifespan
+    res = requests.post(
+        f"{NODE_RUNNER_ADDR}/npu/add",
+        json=payload,
+        timeout=5
+    )
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Project\V1\FlowKit\.conda\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B202E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:00,528 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 09:57:00,529 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 09:57:00,530 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 09:57:00,531 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 09:57:00,532 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 09:57:00,536 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 09:57:00,538 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 09:57:00,538 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 09:57:00,540 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 09:57:00,540 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 09:57:00,542 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 09:57:00,544 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 09:57:00,544 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 09:57:02,574 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B2BCB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:09,078 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/c05d313e-20af-432c-8855-b77f22316798 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEE08D310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:11,604 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B2BD310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:18,118 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/c05d313e-20af-432c-8855-b77f22316798 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEE029BA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:20,628 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B259BA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:27,154 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/c05d313e-20af-432c-8855-b77f22316798 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021BEE02A2C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:29,642 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B25A2C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:35,494 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 09:57:35,495 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 09:57:35,495 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 09:57:35,497 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 09:57:35,497 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 09:57:35,498 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 09:57:35,506 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 09:57:35,512 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 09:57:35,516 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 09:57:35,516 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 09:57:35,518 - [MainThread] - __main__ - INFO - NPU c05d313e-20af-432c-8855-b77f22316798 shutdown complete
+2025-10-15 09:57:38,696 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: HTTPConnectionPool(host='127.0.0.1', port=8500): Max retries exceeded with url: /npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002374B227BF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-10-15 09:57:46,219 - [Thread-1 (start_metrics_poller)] - __main__ - WARNING - Metrics update failed: 404 Client Error: Not Found for url: http://127.0.0.1:8500/npu/pool/b51d8947-e22c-47e0-a7e2-1d5b6ef73994
+2025-10-15 09:57:48,461 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 09:57:48,462 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 09:57:48,462 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 09:57:48,463 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 09:57:48,463 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 09:57:48,464 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 09:57:48,511 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 09:57:48,511 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 09:57:48,511 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 09:57:48,511 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 09:57:48,514 - [MainThread] - __main__ - INFO - NPU b51d8947-e22c-47e0-a7e2-1d5b6ef73994 shutdown complete
+2025-10-15 09:57:52,580 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 09:57:52,581 - [MainThread] - __main__ - INFO - Node configuration - ID: f1c71aef-8cee-4fcf-8651-c8fd8c4bc69a, Port: 10184, Parallel processes: 4
+2025-10-15 09:57:52,581 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 09:57:52,582 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 09:57:52,588 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:57:52,588 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 09:57:52,589 - [MainThread] - __main__ - INFO - Node ID: f1c71aef-8cee-4fcf-8651-c8fd8c4bc69a
+2025-10-15 09:57:52,589 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 09:57:52,590 - [MainThread] - __main__ - INFO - Port: 10184
+2025-10-15 09:57:52,590 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 09:57:52,591 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 09:57:52,591 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 09:57:52,651 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 09:57:52,652 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 09:57:52,696 - [MainThread] - __main__ - INFO - Successfully registered NPU -> {'address': 'http://127.0.0.1:10184', 'id': 'f1c71aef-8cee-4fcf-8651-c8fd8c4bc69a'}
+2025-10-15 09:57:52,697 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 09:57:52,698 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 09:57:52,698 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 09:57:52,699 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 09:57:52,699 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 09:57:52,701 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 09:57:52,702 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 09:57:52,703 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 09:57:52,705 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 09:57:52,705 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 09:57:52,706 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 09:57:52,708 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 09:57:52,708 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 09:58:00,001 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: 8c56dfa0-4eab-444e-987c-15f7c38b6763
+2025-10-15 09:58:00,002 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 09:58:00,006 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 processing node: start
+2025-10-15 09:58:00,007 - [WORKER_1] - __main__ - INFO - Executing code for node: start, runner: 8c56dfa0-4eab-444e-987c-15f7c38b6763
+2025-10-15 09:58:02,663 - [MainThread] - __main__ - INFO - Received result for runner 8c56dfa0-4eab-444e-987c-15f7c38b6763, status: DONE
+2025-10-15 09:58:02,663 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 1
+2025-10-15 09:58:02,664 - [MainThread] - __main__ - INFO - Sending result for node 8c56dfa0-4eab-444e-987c-15f7c38b6763, status: DONE
+2025-10-15 09:58:03,272 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/8c56dfa0-4eab-444e-987c-15f7c38b6763 "HTTP/1.1 201 Created"
+2025-10-15 09:58:03,273 - [MainThread] - __main__ - INFO - Result sent successfully for node 8c56dfa0-4eab-444e-987c-15f7c38b6763
+2025-10-15 09:58:03,432 - [WORKER_1] - __main__ - INFO - EXEC TIME for start: 3.405s
+2025-10-15 09:58:03,434 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 completed node: start
+2025-10-15 09:58:04,229 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: 37d3e9dd-7f35-4bf2-9f61-ddfabaa37144
+2025-10-15 09:58:04,231 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 09:58:04,251 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 processing node: node1
+2025-10-15 09:58:04,253 - [WORKER_1] - __main__ - INFO - Executing code for node: node1, runner: 37d3e9dd-7f35-4bf2-9f61-ddfabaa37144
+2025-10-15 09:58:06,348 - [MainThread] - __main__ - INFO - Received result for runner 37d3e9dd-7f35-4bf2-9f61-ddfabaa37144, status: DONE
+2025-10-15 09:58:06,349 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 2
+2025-10-15 09:58:06,350 - [MainThread] - __main__ - INFO - Sending result for node 37d3e9dd-7f35-4bf2-9f61-ddfabaa37144, status: DONE
+2025-10-15 09:58:06,790 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/37d3e9dd-7f35-4bf2-9f61-ddfabaa37144 "HTTP/1.1 201 Created"
+2025-10-15 09:58:06,791 - [MainThread] - __main__ - INFO - Result sent successfully for node 37d3e9dd-7f35-4bf2-9f61-ddfabaa37144
+2025-10-15 09:58:07,001 - [WORKER_1] - __main__ - INFO - EXEC TIME for node1: 2.742s
+2025-10-15 09:58:07,003 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 completed node: node1
+2025-10-15 10:28:15,224 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: 93cf3370-4b26-41a6-9eb3-d397ba996669
+2025-10-15 10:28:15,225 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:28:15,247 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 processing node: start
+2025-10-15 10:28:15,247 - [WORKER_0] - __main__ - INFO - Executing code for node: start, runner: 93cf3370-4b26-41a6-9eb3-d397ba996669
+2025-10-15 10:28:24,094 - [MainThread] - __main__ - INFO - Received result for runner 93cf3370-4b26-41a6-9eb3-d397ba996669, status: DONE
+2025-10-15 10:28:24,096 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 3
+2025-10-15 10:28:24,096 - [MainThread] - __main__ - INFO - Sending result for node 93cf3370-4b26-41a6-9eb3-d397ba996669, status: DONE
+2025-10-15 10:28:24,552 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/93cf3370-4b26-41a6-9eb3-d397ba996669 "HTTP/1.1 201 Created"
+2025-10-15 10:28:24,553 - [MainThread] - __main__ - INFO - Result sent successfully for node 93cf3370-4b26-41a6-9eb3-d397ba996669
+2025-10-15 10:28:24,874 - [WORKER_0] - __main__ - INFO - EXEC TIME for start: 9.621s
+2025-10-15 10:28:24,876 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 completed node: start
+2025-10-15 10:28:25,325 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b
+2025-10-15 10:28:25,325 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:28:25,330 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 processing node: node1
+2025-10-15 10:28:25,331 - [WORKER_0] - __main__ - INFO - Executing code for node: node1, runner: e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b
+2025-10-15 10:28:26,417 - [MainThread] - __main__ - INFO - Received result for runner e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b, status: DONE
+2025-10-15 10:28:26,417 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 4
+2025-10-15 10:28:26,418 - [MainThread] - __main__ - INFO - Sending result for node e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b, status: DONE
+2025-10-15 10:28:26,643 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b "HTTP/1.1 201 Created"
+2025-10-15 10:28:26,644 - [MainThread] - __main__ - INFO - Result sent successfully for node e3abde0a-4dc3-4985-b5d7-ddfdf2e7a14b
+2025-10-15 10:28:26,735 - [WORKER_0] - __main__ - INFO - EXEC TIME for node1: 1.403s
+2025-10-15 10:28:26,736 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 completed node: node1
+2025-10-15 10:34:39,598 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: c83b3385-a879-40c5-958a-39ebbf79b7f9
+2025-10-15 10:34:39,599 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:34:39,602 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 processing node: start
+2025-10-15 10:34:39,603 - [WORKER_1] - __main__ - INFO - Executing code for node: start, runner: c83b3385-a879-40c5-958a-39ebbf79b7f9
+2025-10-15 10:34:41,883 - [MainThread] - __main__ - INFO - Received result for runner c83b3385-a879-40c5-958a-39ebbf79b7f9, status: DONE
+2025-10-15 10:34:41,884 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 5
+2025-10-15 10:34:41,884 - [MainThread] - __main__ - INFO - Sending result for node c83b3385-a879-40c5-958a-39ebbf79b7f9, status: DONE
+2025-10-15 10:34:42,320 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/c83b3385-a879-40c5-958a-39ebbf79b7f9 "HTTP/1.1 201 Created"
+2025-10-15 10:34:42,322 - [MainThread] - __main__ - INFO - Result sent successfully for node c83b3385-a879-40c5-958a-39ebbf79b7f9
+2025-10-15 10:34:42,478 - [WORKER_1] - __main__ - INFO - EXEC TIME for start: 2.870s
+2025-10-15 10:34:42,480 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 completed node: start
+2025-10-15 10:34:43,463 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: b606981f-4fb9-4425-b3db-945d03997943
+2025-10-15 10:34:43,464 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:34:43,466 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 processing node: node1
+2025-10-15 10:34:43,467 - [WORKER_2] - __main__ - INFO - Executing code for node: node1, runner: b606981f-4fb9-4425-b3db-945d03997943
+2025-10-15 10:34:47,187 - [MainThread] - __main__ - INFO - Received result for runner b606981f-4fb9-4425-b3db-945d03997943, status: ERROR
+2025-10-15 10:34:47,188 - [MainThread] - __main__ - ERROR - Task failed. Total failed: 1
+2025-10-15 10:34:47,188 - [MainThread] - __main__ - INFO - Sending result for node b606981f-4fb9-4425-b3db-945d03997943, status: ERROR
+2025-10-15 10:34:47,631 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/b606981f-4fb9-4425-b3db-945d03997943 "HTTP/1.1 201 Created"
+2025-10-15 10:34:47,632 - [MainThread] - __main__ - INFO - Result sent successfully for node b606981f-4fb9-4425-b3db-945d03997943
+2025-10-15 10:34:47,955 - [WORKER_2] - __main__ - INFO - EXEC TIME for node1: 4.484s
+2025-10-15 10:34:47,957 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 completed node: node1
+2025-10-15 10:35:21,382 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: 202a1e89-4d83-41aa-8bc2-24abfb1a2870
+2025-10-15 10:35:21,382 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:35:21,394 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 processing node: start
+2025-10-15 10:35:21,395 - [WORKER_3] - __main__ - INFO - Executing code for node: start, runner: 202a1e89-4d83-41aa-8bc2-24abfb1a2870
+2025-10-15 10:35:23,389 - [MainThread] - __main__ - INFO - Received result for runner 202a1e89-4d83-41aa-8bc2-24abfb1a2870, status: DONE
+2025-10-15 10:35:23,390 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 6
+2025-10-15 10:35:23,391 - [MainThread] - __main__ - INFO - Sending result for node 202a1e89-4d83-41aa-8bc2-24abfb1a2870, status: DONE
+2025-10-15 10:35:24,006 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/202a1e89-4d83-41aa-8bc2-24abfb1a2870 "HTTP/1.1 201 Created"
+2025-10-15 10:35:24,007 - [MainThread] - __main__ - INFO - Result sent successfully for node 202a1e89-4d83-41aa-8bc2-24abfb1a2870
+2025-10-15 10:35:24,136 - [WORKER_3] - __main__ - INFO - EXEC TIME for start: 2.737s
+2025-10-15 10:35:24,138 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 completed node: start
+2025-10-15 10:35:25,305 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: 92386b92-7ee7-48b0-8e3a-5dd3174391f6
+2025-10-15 10:35:25,305 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 10:35:25,330 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 processing node: node1
+2025-10-15 10:35:25,331 - [WORKER_3] - __main__ - INFO - Executing code for node: node1, runner: 92386b92-7ee7-48b0-8e3a-5dd3174391f6
+2025-10-15 10:35:33,790 - [MainThread] - __main__ - INFO - Received result for runner 92386b92-7ee7-48b0-8e3a-5dd3174391f6, status: DONE
+2025-10-15 10:35:33,791 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 7
+2025-10-15 10:35:33,793 - [MainThread] - __main__ - INFO - Sending result for node 92386b92-7ee7-48b0-8e3a-5dd3174391f6, status: DONE
+2025-10-15 10:35:34,231 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/92386b92-7ee7-48b0-8e3a-5dd3174391f6 "HTTP/1.1 201 Created"
+2025-10-15 10:35:34,232 - [MainThread] - __main__ - INFO - Result sent successfully for node 92386b92-7ee7-48b0-8e3a-5dd3174391f6
+2025-10-15 10:35:34,556 - [WORKER_3] - __main__ - INFO - EXEC TIME for node1: 9.215s
+2025-10-15 10:35:34,560 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 completed node: node1
+2025-10-15 11:09:02,195 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: c1e774fe-4ca9-49b3-875d-66d2df99b220
+2025-10-15 11:09:02,198 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 11:09:02,200 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 processing node: start
+2025-10-15 11:09:02,202 - [WORKER_3] - __main__ - INFO - Executing code for node: start, runner: c1e774fe-4ca9-49b3-875d-66d2df99b220
+2025-10-15 11:09:04,754 - [MainThread] - __main__ - INFO - Received result for runner c1e774fe-4ca9-49b3-875d-66d2df99b220, status: DONE
+2025-10-15 11:09:04,754 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 8
+2025-10-15 11:09:04,755 - [MainThread] - __main__ - INFO - Sending result for node c1e774fe-4ca9-49b3-875d-66d2df99b220, status: DONE
+2025-10-15 11:09:05,217 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/c1e774fe-4ca9-49b3-875d-66d2df99b220 "HTTP/1.1 201 Created"
+2025-10-15 11:09:05,219 - [MainThread] - __main__ - INFO - Result sent successfully for node c1e774fe-4ca9-49b3-875d-66d2df99b220
+2025-10-15 11:09:05,342 - [WORKER_3] - __main__ - INFO - EXEC TIME for start: 3.135s
+2025-10-15 11:09:05,344 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 completed node: start
+2025-10-15 11:09:06,198 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: 9457e1fb-3a29-4112-9db2-6f1b61383d7e
+2025-10-15 11:09:06,199 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 11:09:06,211 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 processing node: node1
+2025-10-15 11:09:06,211 - [WORKER_3] - __main__ - INFO - Executing code for node: node1, runner: 9457e1fb-3a29-4112-9db2-6f1b61383d7e
+2025-10-15 11:09:13,694 - [MainThread] - __main__ - INFO - Received result for runner 9457e1fb-3a29-4112-9db2-6f1b61383d7e, status: DONE
+2025-10-15 11:09:13,696 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 9
+2025-10-15 11:09:13,697 - [MainThread] - __main__ - INFO - Sending result for node 9457e1fb-3a29-4112-9db2-6f1b61383d7e, status: DONE
+2025-10-15 11:09:14,216 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/9457e1fb-3a29-4112-9db2-6f1b61383d7e "HTTP/1.1 201 Created"
+2025-10-15 11:09:14,218 - [MainThread] - __main__ - INFO - Result sent successfully for node 9457e1fb-3a29-4112-9db2-6f1b61383d7e
+2025-10-15 11:09:14,589 - [WORKER_3] - __main__ - INFO - EXEC TIME for node1: 8.368s
+2025-10-15 11:09:14,592 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 completed node: node1
+2025-10-15 11:10:29,771 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 11:10:29,771 - [MainThread] - __main__ - INFO - Node configuration - ID: 8c1f8c16-4f58-4997-ad70-e3d328fa84a2, Port: 10409, Parallel processes: 4
+2025-10-15 11:10:29,772 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 11:10:29,772 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 11:10:29,778 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 11:10:29,778 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 11:10:29,778 - [MainThread] - __main__ - INFO - Node ID: 8c1f8c16-4f58-4997-ad70-e3d328fa84a2
+2025-10-15 11:10:29,779 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 11:10:29,779 - [MainThread] - __main__ - INFO - Port: 10409
+2025-10-15 11:10:29,779 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 11:10:29,780 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 11:10:29,780 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 11:10:29,835 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 11:10:29,836 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 11:10:29,856 - [MainThread] - __main__ - INFO - Successfully registered NPU -> {'address': 'http://127.0.0.1:10409', 'id': '8c1f8c16-4f58-4997-ad70-e3d328fa84a2'}
+2025-10-15 11:10:29,856 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 11:10:29,856 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 11:10:29,857 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 11:10:29,857 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 11:10:29,858 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 11:10:29,862 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 11:10:29,863 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 11:10:29,864 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 11:10:29,864 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 11:10:29,864 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 11:10:29,865 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 11:10:29,865 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 11:10:29,865 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 11:12:28,599 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 11:12:28,599 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 11:12:28,600 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 11:12:28,601 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 11:12:28,601 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 11:12:28,602 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 11:12:28,603 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 11:12:28,612 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 11:12:28,613 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 11:12:28,646 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 11:12:28,648 - [MainThread] - __main__ - INFO - NPU 8c1f8c16-4f58-4997-ad70-e3d328fa84a2 shutdown complete
+2025-10-15 11:21:32,571 - [MainThread] - __main__ - INFO - Received node for execution: start, runner: 7173dd9d-905b-4df6-bae3-b162d1d2e3c4
+2025-10-15 11:21:32,572 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 11:21:32,578 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 processing node: start
+2025-10-15 11:21:32,578 - [WORKER_0] - __main__ - INFO - Executing code for node: start, runner: 7173dd9d-905b-4df6-bae3-b162d1d2e3c4
+2025-10-15 11:21:34,622 - [MainThread] - __main__ - INFO - Received result for runner 7173dd9d-905b-4df6-bae3-b162d1d2e3c4, status: DONE
+2025-10-15 11:21:34,622 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 10
+2025-10-15 11:21:34,623 - [MainThread] - __main__ - INFO - Sending result for node 7173dd9d-905b-4df6-bae3-b162d1d2e3c4, status: DONE
+2025-10-15 11:21:35,057 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/7173dd9d-905b-4df6-bae3-b162d1d2e3c4 "HTTP/1.1 201 Created"
+2025-10-15 11:21:35,059 - [MainThread] - __main__ - INFO - Result sent successfully for node 7173dd9d-905b-4df6-bae3-b162d1d2e3c4
+2025-10-15 11:21:35,281 - [WORKER_0] - __main__ - INFO - EXEC TIME for start: 2.698s
+2025-10-15 11:21:35,283 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 completed node: start
+2025-10-15 11:21:36,193 - [MainThread] - __main__ - INFO - Received node for execution: node1, runner: 8e5eee5b-18bd-4fd0-b725-db8aa6879ab1
+2025-10-15 11:21:36,193 - [MainThread] - __main__ - INFO - Node queued successfully. Current queue size: 1
+2025-10-15 11:21:36,196 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 processing node: node1
+2025-10-15 11:21:36,196 - [WORKER_0] - __main__ - INFO - Executing code for node: node1, runner: 8e5eee5b-18bd-4fd0-b725-db8aa6879ab1
+2025-10-15 11:21:43,386 - [MainThread] - __main__ - INFO - Received result for runner 8e5eee5b-18bd-4fd0-b725-db8aa6879ab1, status: DONE
+2025-10-15 11:21:43,388 - [MainThread] - __main__ - INFO - Task succeeded. Total successful: 11
+2025-10-15 11:21:43,389 - [MainThread] - __main__ - INFO - Sending result for node 8e5eee5b-18bd-4fd0-b725-db8aa6879ab1, status: DONE
+2025-10-15 11:21:43,814 - [MainThread] - httpx - INFO - HTTP Request: POST http://127.0.0.1:8500/npu/result/8e5eee5b-18bd-4fd0-b725-db8aa6879ab1 "HTTP/1.1 201 Created"
+2025-10-15 11:21:43,815 - [MainThread] - __main__ - INFO - Result sent successfully for node 8e5eee5b-18bd-4fd0-b725-db8aa6879ab1
+2025-10-15 11:21:44,152 - [WORKER_0] - __main__ - INFO - EXEC TIME for node1: 7.952s
+2025-10-15 11:21:44,153 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 completed node: node1
+2025-10-15 11:23:57,609 - [MainThread] - __main__ - INFO - Environment variables loaded
+2025-10-15 11:23:57,610 - [MainThread] - __main__ - INFO - Node configuration - ID: dbbfd20d-b172-495c-b25b-5f0068922f2d, Port: 10256, Parallel processes: 4
+2025-10-15 11:23:57,610 - [MainThread] - __main__ - INFO - Detected OS: Windows
+2025-10-15 11:23:57,611 - [MainThread] - __main__ - INFO - Python sandbox path: D:\Project\V1\FlowKit\src\NodeProcessUnit\venv\Scripts\python.exe
+2025-10-15 11:23:57,618 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 11:23:57,618 - [MainThread] - __main__ - INFO - Starting NPU Node Runner
+2025-10-15 11:23:57,619 - [MainThread] - __main__ - INFO - Node ID: dbbfd20d-b172-495c-b25b-5f0068922f2d
+2025-10-15 11:23:57,619 - [MainThread] - __main__ - INFO - Host: 0.0.0.0
+2025-10-15 11:23:57,620 - [MainThread] - __main__ - INFO - Port: 10256
+2025-10-15 11:23:57,620 - [MainThread] - __main__ - INFO - Node Runner Address: http://127.0.0.1:8500
+2025-10-15 11:23:57,620 - [MainThread] - __main__ - INFO - Parallel Processes: 4
+2025-10-15 11:23:57,620 - [MainThread] - __main__ - INFO - ================================================================================
+2025-10-15 11:23:57,683 - [MainThread] - __main__ - INFO - Application startup initiated
+2025-10-15 11:23:57,683 - [MainThread] - __main__ - INFO - Registering NPU with node runner at http://127.0.0.1:8500
+2025-10-15 11:23:57,715 - [MainThread] - __main__ - INFO - Successfully registered NPU -> {'address': 'http://127.0.0.1:10256', 'id': 'dbbfd20d-b172-495c-b25b-5f0068922f2d'}
+2025-10-15 11:23:57,716 - [MainThread] - __main__ - INFO - Starting 4 worker threads
+2025-10-15 11:23:57,717 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_0
+2025-10-15 11:23:57,717 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_1
+2025-10-15 11:23:57,718 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_2
+2025-10-15 11:23:57,718 - [MainThread] - __main__ - INFO - Worker initialized: WORKER_3
+2025-10-15 11:23:57,719 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 started
+2025-10-15 11:23:57,721 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 started
+2025-10-15 11:23:57,723 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 started
+2025-10-15 11:23:57,724 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 started
+2025-10-15 11:23:57,725 - [MainThread] - __main__ - INFO - All 4 workers started
+2025-10-15 11:23:57,726 - [MainThread] - __main__ - INFO - Starting metrics poller thread
+2025-10-15 11:23:57,729 - [Thread-1 (start_metrics_poller)] - __main__ - INFO - Metrics poller started
+2025-10-15 11:23:57,729 - [MainThread] - __main__ - INFO - Application startup complete
+2025-10-15 11:34:15,964 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 11:34:15,965 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 11:34:15,966 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 11:34:15,966 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 11:34:15,967 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 11:34:15,967 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 11:34:15,967 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 11:34:15,968 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 11:34:15,997 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 11:34:16,016 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 11:34:16,018 - [MainThread] - __main__ - INFO - NPU dbbfd20d-b172-495c-b25b-5f0068922f2d shutdown complete
+2025-10-15 11:34:18,912 - [MainThread] - __main__ - INFO - Application shutdown initiated
+2025-10-15 11:34:18,913 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_0
+2025-10-15 11:34:18,914 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_1
+2025-10-15 11:34:18,915 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_2
+2025-10-15 11:34:18,915 - [MainThread] - __main__ - INFO - Stopping worker: WORKER_3
+2025-10-15 11:34:18,916 - [MainThread] - __main__ - INFO - Waiting for workers to finish...
+2025-10-15 11:34:18,946 - [WORKER_3] - __main__ - INFO - Worker WORKER_3 stopped
+2025-10-15 11:34:18,948 - [WORKER_2] - __main__ - INFO - Worker WORKER_2 stopped
+2025-10-15 11:34:18,948 - [WORKER_1] - __main__ - INFO - Worker WORKER_1 stopped
+2025-10-15 11:34:18,949 - [WORKER_0] - __main__ - INFO - Worker WORKER_0 stopped
+2025-10-15 11:34:18,950 - [MainThread] - __main__ - INFO - NPU f1c71aef-8cee-4fcf-8651-c8fd8c4bc69a shutdown complete

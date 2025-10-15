@@ -118,6 +118,8 @@ return nodes, success_outputs, status_message
 - **status_message**: Human-readable execution status
 
 ---
+## DEMO
+[![Watch the video](https://img.youtube.com/vi/kM_ATi6F2xA/0.jpg)](https://www.youtube.com/watch?v=kM_ATi6F2xA)
 
 ## 🎨 User Interface
 
@@ -138,11 +140,17 @@ Monitor system health and resource utilization in real-time:
 ![Resource Monitor - Load](res/resource_monitor_load.png)
 
 **Idle State**  
-![Resource Monitor - No Load][/res/resource_monitor_noload.png]
+![Resource Monitor - No Load](res/noload.png)
 
 Track CPU, memory, and network usage across all NPUs and make informed scaling decisions.
 
+### Builder
+![builder](res/builder.png)
+
+### Trace
+![trace](res/trace.png)
 ---
+
 
 ## 🔐 Security Features
 
